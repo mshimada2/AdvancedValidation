@@ -38,5 +38,39 @@ else{
     document.getElementById("passwordGroup").classList.remove("has-error");
 }
 
+if (passEntered.length < 6 && passEntered.length > 20){
+  document.getElementById("passwordError").innerHTML="Password Must Be At Least 6 Charachters And No Less Than 20.";
+  document.getElementById("passwordError").classList.remove("hidden-message");
+  document.getElementById("passwordError").classList.add("shown-message");
+  //Turn the password items red
+  document.getElementById("passwordGroup").classList.add("has-error");
+}
+else{
+  document.getElementById("passwordError").innerHTML="Good password.";
+  document.getElementById("passwordError").classList.remove("hidden-message");
+  document.getElementById("passwordError").classList.add("shown-message");
+  //Turn the password items red
+  document.getElementById("passwordGroup").classList.add("has-success");
+    document.getElementById("passwordGroup").classList.remove("has-error");
+}
+
+if (passEntered == userEntered.value){
+  document.getElementById("passwordError").innerHTML="Password Cannot Be The Same As Username";
+  document.getElementById("passwordError").classList.remove("hidden-message");
+  document.getElementById("passwordError").classList.add("shown-message");
+  //Turn the password items red
+  document.getElementById("passwordGroup").classList.add("has-error");
+}
+else{
+  document.getElementById("passwordError").innerHTML="Good password.";
+  document.getElementById("passwordError").classList.remove("hidden-message");
+  document.getElementById("passwordError").classList.add("shown-message");
+  //Turn the password items red
+  document.getElementById("passwordGroup").classList.add("has-success");
+    document.getElementById("passwordGroup").classList.remove("has-error");
+}
+
+
+
 
 }
